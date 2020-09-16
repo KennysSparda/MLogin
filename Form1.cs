@@ -16,5 +16,17 @@ namespace Login_M
         {
             InitializeComponent();
         }
+
+        private void btn_login_signup_Click(object sender, EventArgs e)
+        {
+            panel_login.Visible = false;
+            panel_signup.Visible = true;
+        }
+
+        private void btn_signup_cancel_Click(object sender, EventArgs e)
+        {
+            panel_signup.Visible = false;
+            panel_login.Visible = true;
+        }
     }
 }
