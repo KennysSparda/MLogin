@@ -13,6 +13,6 @@ namespace Login_M
         public static int nivel=0;
         public static string local = System.AppDomain.CurrentDomain.BaseDirectory.ToString();
         public static string dbname = "mdb.db";
-        public static string localdb = local + @"\database\";
+        public static string localdb = local + @"\db\";
     }
 }

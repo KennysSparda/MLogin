@@ -1,7 +1,6 @@
 C:\Users\Swygax\source\repos\Login_M\bin\Debug\Login_M.exe.config
 C:\Users\Swygax\source\repos\Login_M\bin\Debug\Login_M.exe
 C:\Users\Swygax\source\repos\Login_M\bin\Debug\Login_M.pdb
-C:\Users\Swygax\source\repos\Login_M\obj\Debug\Login_M.csprojAssemblyReference.cache
 C:\Users\Swygax\source\repos\Login_M\obj\Debug\Login_M.frm_login.resources
 C:\Users\Swygax\source\repos\Login_M\obj\Debug\Login_M.Properties.Resources.resources
 C:\Users\Swygax\source\repos\Login_M\obj\Debug\Login_M.csproj.GenerateResource.cache
