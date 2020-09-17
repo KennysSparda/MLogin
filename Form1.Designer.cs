@@ -34,7 +34,7 @@
             this.lbl_status_access_num = new System.Windows.Forms.Label();
             this.lbl_status_user = new System.Windows.Forms.Label();
             this.lbl_status_access = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pb_status_led = new System.Windows.Forms.PictureBox();
             this.panel_login = new System.Windows.Forms.Panel();
             this.txtbox_login_user_name = new System.Windows.Forms.TextBox();
             this.txtbox_login_passwd = new System.Windows.Forms.TextBox();
@@ -45,18 +45,18 @@
             this.lbl_login_passwd = new System.Windows.Forms.Label();
             this.lbl_login_user_name = new System.Windows.Forms.Label();
             this.panel_signup = new System.Windows.Forms.Panel();
+            this.btn_signup_signup = new System.Windows.Forms.Button();
+            this.btn_signup_back = new System.Windows.Forms.Button();
             this.txtbox_signup_user_name = new System.Windows.Forms.TextBox();
             this.txtbox_signup_confirm_passwd = new System.Windows.Forms.TextBox();
             this.txtbox_signup_passwd = new System.Windows.Forms.TextBox();
             this.lbl_signup_MFCloud = new System.Windows.Forms.Label();
-            this.btn_signup_signup = new System.Windows.Forms.Button();
-            this.btn_signup_cancel = new System.Windows.Forms.Button();
             this.lbl_signup_confirm_passwd = new System.Windows.Forms.Label();
             this.pb_signup_logo = new System.Windows.Forms.PictureBox();
             this.lbl_signup_passwd = new System.Windows.Forms.Label();
             this.lbl_signup_user_name = new System.Windows.Forms.Label();
             this.panel_status.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_status_led)).BeginInit();
             this.panel_login.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pb_login_logo)).BeginInit();
             this.panel_signup.SuspendLayout();
@@ -70,7 +70,7 @@
             this.panel_status.Controls.Add(this.lbl_status_access_num);
             this.panel_status.Controls.Add(this.lbl_status_user);
             this.panel_status.Controls.Add(this.lbl_status_access);
-            this.panel_status.Controls.Add(this.pictureBox1);
+            this.panel_status.Controls.Add(this.pb_status_led);
             this.panel_status.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel_status.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel_status.Location = new System.Drawing.Point(0, 236);
@@ -122,15 +122,15 @@
             this.lbl_status_access.TabIndex = 1;
             this.lbl_status_access.Text = "Acessos:";
             // 
-            // pictureBox1
+            // pb_status_led
             // 
-            this.pictureBox1.Image = global::Login_M.Properties.Resources.led_red;
-            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(25, 25);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
+            this.pb_status_led.Image = global::Login_M.Properties.Resources.led_red;
+            this.pb_status_led.Location = new System.Drawing.Point(0, 0);
+            this.pb_status_led.Name = "pb_status_led";
+            this.pb_status_led.Size = new System.Drawing.Size(25, 25);
+            this.pb_status_led.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pb_status_led.TabIndex = 0;
+            this.pb_status_led.TabStop = false;
             // 
             // panel_login
             // 
@@ -210,6 +210,7 @@
             this.btn_login_login.TabIndex = 2;
             this.btn_login_login.Text = "Entrar";
             this.btn_login_login.UseVisualStyleBackColor = false;
+            this.btn_login_login.Click += new System.EventHandler(this.btn_login_login_Click);
             // 
             // pb_login_logo
             // 
@@ -247,7 +248,7 @@
             // 
             this.panel_signup.BackColor = System.Drawing.Color.DimGray;
             this.panel_signup.Controls.Add(this.btn_signup_signup);
-            this.panel_signup.Controls.Add(this.btn_signup_cancel);
+            this.panel_signup.Controls.Add(this.btn_signup_back);
             this.panel_signup.Controls.Add(this.txtbox_signup_user_name);
             this.panel_signup.Controls.Add(this.txtbox_signup_confirm_passwd);
             this.panel_signup.Controls.Add(this.txtbox_signup_passwd);
@@ -264,6 +265,34 @@
             this.panel_signup.Size = new System.Drawing.Size(384, 261);
             this.panel_signup.TabIndex = 1;
             this.panel_signup.Visible = false;
+            // 
+            // btn_signup_signup
+            // 
+            this.btn_signup_signup.BackColor = System.Drawing.Color.Black;
+            this.btn_signup_signup.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btn_signup_signup.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_signup_signup.ForeColor = System.Drawing.Color.White;
+            this.btn_signup_signup.Location = new System.Drawing.Point(65, 178);
+            this.btn_signup_signup.Name = "btn_signup_signup";
+            this.btn_signup_signup.Size = new System.Drawing.Size(92, 23);
+            this.btn_signup_signup.TabIndex = 3;
+            this.btn_signup_signup.Text = "Criar";
+            this.btn_signup_signup.UseVisualStyleBackColor = false;
+            this.btn_signup_signup.Click += new System.EventHandler(this.btn_signup_signup_Click);
+            // 
+            // btn_signup_back
+            // 
+            this.btn_signup_back.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btn_signup_back.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btn_signup_back.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_signup_back.ForeColor = System.Drawing.Color.White;
+            this.btn_signup_back.Location = new System.Drawing.Point(163, 178);
+            this.btn_signup_back.Name = "btn_signup_back";
+            this.btn_signup_back.Size = new System.Drawing.Size(92, 23);
+            this.btn_signup_back.TabIndex = 4;
+            this.btn_signup_back.Text = "Voltar";
+            this.btn_signup_back.UseVisualStyleBackColor = false;
+            this.btn_signup_back.Click += new System.EventHandler(this.btn_signup_cancel_Click);
             // 
             // txtbox_signup_user_name
             // 
@@ -309,33 +338,6 @@
             this.lbl_signup_MFCloud.Size = new System.Drawing.Size(170, 42);
             this.lbl_signup_MFCloud.TabIndex = 4;
             this.lbl_signup_MFCloud.Text = "MFCloud";
-            // 
-            // btn_signup_signup
-            // 
-            this.btn_signup_signup.BackColor = System.Drawing.Color.Black;
-            this.btn_signup_signup.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btn_signup_signup.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_signup_signup.ForeColor = System.Drawing.Color.White;
-            this.btn_signup_signup.Location = new System.Drawing.Point(65, 178);
-            this.btn_signup_signup.Name = "btn_signup_signup";
-            this.btn_signup_signup.Size = new System.Drawing.Size(92, 23);
-            this.btn_signup_signup.TabIndex = 3;
-            this.btn_signup_signup.Text = "Criar";
-            this.btn_signup_signup.UseVisualStyleBackColor = false;
-            // 
-            // btn_signup_cancel
-            // 
-            this.btn_signup_cancel.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btn_signup_cancel.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btn_signup_cancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_signup_cancel.ForeColor = System.Drawing.Color.White;
-            this.btn_signup_cancel.Location = new System.Drawing.Point(163, 178);
-            this.btn_signup_cancel.Name = "btn_signup_cancel";
-            this.btn_signup_cancel.Size = new System.Drawing.Size(92, 23);
-            this.btn_signup_cancel.TabIndex = 4;
-            this.btn_signup_cancel.Text = "Cancelar";
-            this.btn_signup_cancel.UseVisualStyleBackColor = false;
-            this.btn_signup_cancel.Click += new System.EventHandler(this.btn_signup_cancel_Click);
             // 
             // lbl_signup_confirm_passwd
             // 
@@ -396,7 +398,7 @@
             this.Text = "MFCloud";
             this.panel_status.ResumeLayout(false);
             this.panel_status.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_status_led)).EndInit();
             this.panel_login.ResumeLayout(false);
             this.panel_login.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pb_login_logo)).EndInit();
@@ -410,11 +412,8 @@
         #endregion
 
         private System.Windows.Forms.Panel panel_status;
-        private System.Windows.Forms.Label lbl_status_user_name;
-        private System.Windows.Forms.Label lbl_status_access_num;
         private System.Windows.Forms.Label lbl_status_user;
         private System.Windows.Forms.Label lbl_status_access;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel panel_login;
         private System.Windows.Forms.PictureBox pb_login_logo;
         private System.Windows.Forms.Label lbl_login_passwd;
@@ -429,12 +428,15 @@
         private System.Windows.Forms.TextBox txtbox_signup_passwd;
         private System.Windows.Forms.Label lbl_signup_MFCloud;
         private System.Windows.Forms.Button btn_signup_signup;
-        private System.Windows.Forms.Button btn_signup_cancel;
+        private System.Windows.Forms.Button btn_signup_back;
         private System.Windows.Forms.PictureBox pb_signup_logo;
         private System.Windows.Forms.Label lbl_signup_passwd;
         private System.Windows.Forms.Label lbl_signup_user_name;
         private System.Windows.Forms.TextBox txtbox_signup_confirm_passwd;
         private System.Windows.Forms.Label lbl_signup_confirm_passwd;
+        public System.Windows.Forms.Label lbl_status_user_name;
+        public System.Windows.Forms.Label lbl_status_access_num;
+        public System.Windows.Forms.PictureBox pb_status_led;
     }
 }
 
