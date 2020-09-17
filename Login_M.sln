@@ -5,7 +5,7 @@ VisualStudioVersion = 16.0.30413.136
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Login_M", "Login_M.csproj", "{22D6D3DD-59F9-4682-A338-1D9FB51E6D74}"
 EndProject
-Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "MFCloud_Login_installer", "installer\MFCloud_Login_installer\MFCloud_Login_installer.vdproj", "{D3AF6335-4307-40B3-9A7D-DF8C353551A1}"
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "MFCloud_installer", "installer\MFCloud_installer\MFCloud_installer.vdproj", "{36EBEE27-B957-4BD1-BD52-A296368AD4AE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,8 +17,8 @@ Global
 		{22D6D3DD-59F9-4682-A338-1D9FB51E6D74}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{22D6D3DD-59F9-4682-A338-1D9FB51E6D74}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{22D6D3DD-59F9-4682-A338-1D9FB51E6D74}.Release|Any CPU.Build.0 = Release|Any CPU
-		{D3AF6335-4307-40B3-9A7D-DF8C353551A1}.Debug|Any CPU.ActiveCfg = Debug
-		{D3AF6335-4307-40B3-9A7D-DF8C353551A1}.Release|Any CPU.ActiveCfg = Release
+		{36EBEE27-B957-4BD1-BD52-A296368AD4AE}.Debug|Any CPU.ActiveCfg = Debug
+		{36EBEE27-B957-4BD1-BD52-A296368AD4AE}.Release|Any CPU.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
